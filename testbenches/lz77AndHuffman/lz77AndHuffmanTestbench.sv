@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module lz4AndHuffmanTestbench();
+module lz77AndHuffmanTestbench();
 
 reg clock, reset;
 reg [7:0] writeData;
@@ -16,7 +16,7 @@ reg [7:0] dataIn [0:4095];
 wire [7:0] decompressedDataOut [0:4095];
 wire finished;
 wire [12:0] numberOfMatchingBytes;
-lz4AndHuffmanWrapper lz4(
+lz77AndHuffmanWrapper lz77(
   .clock(clock),
   .reset(reset),
   .dataIn(dataIn),
@@ -38,7 +38,7 @@ integer clockCount;
 
 initial begin
 	$dumpfile("traceOutput.fst");
-	$dumpvars(0,lz4AndHuffmanTestbench);
+	$dumpvars(0,lz77AndHuffmanTestbench);
 end
 
 initial begin

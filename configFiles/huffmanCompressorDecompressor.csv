@@ -17,5 +17,5 @@ compressorInputRegister, false
 decompressorParallelInput, false
 decompressorParallelOutput, false
 decompressorInputRegister, false
-variableCompression, false
+variableCompression, true
 debugStatistics, false
